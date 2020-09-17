@@ -15,11 +15,11 @@ public interface visitor3 {
       map.put(type, fun);
       return this;
     }
-    public R call(Object receiver) {
+    /*public R call(Object receiver) {
       return map.getOrDefault(receiver.getClass(),
           obj -> { throw new IllegalArgumentException("invalid " + obj); })
           .apply(receiver);   // doesn't compile :(
-    }
+    }*/
   }
 
   public static void main(String[] args) {
@@ -28,7 +28,7 @@ public interface visitor3 {
            .when(Moto.class, moto -> "moto");
 
     Vehicle vehicle = new Car();
-    String text = visitor.call(vehicle);  
-    System.out.println(text);
+    //String text = visitor.call(vehicle);
+    //System.out.println(text);
   }
 }

@@ -12,7 +12,7 @@ public interface visitor2 {
     private final HashMap<Class<?>, Function<Object, ? extends R>> map = new HashMap<>();
     
     public <T> Visitor<R> when(Class<? extends T> type, Function<? super T, ? extends R> fun) {
-      map.put(type, fun);  // doesn't compile :(
+      //map.put(type, fun);  // doesn't compile :(
       return this;
     }
     public R call(Object receiver) {

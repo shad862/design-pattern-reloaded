@@ -25,6 +25,7 @@ public interface visitor6 {
   }
 
   public static void main(String[] args) {
+/*
     Visitor<Vehicle, String> visitor = new Visitor<>();
     visitor.when(Car.class, car -> "car")
            .when(Moto.class, moto -> "moto")
@@ -34,5 +35,6 @@ public interface visitor6 {
     String text = visitor.call(vehicle);
     visitor.call(new Fruit()); // doesn't compile :)
     System.out.println(text);
+*/
   }
 }
